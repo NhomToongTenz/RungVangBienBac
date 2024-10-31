@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class DigController : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class DigController : MonoBehaviour
                     {
                         Debug.Log("Chúc mừng! Đã qua màn.");
                         // Thực hiện logic qua màn, ví dụ: chuyển màn mới
+                        SceneManager.LoadScene("Level 2");
                     }
                 }
 
