@@ -1,11 +1,42 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+public class LevelSelection : MonoBehaviour
 {
-    public void OpenLevel(int levelId)
+    [SerializeField] private bool unlocked;
+    public Image unlockImage;
+    public int levelNumber;
+
+    private void Start()
     {
-        string levelName = "Level " + levelId;
-        SceneManager.LoadScene(levelName);
+        UpdateLevelStatus();
+        UpdateLevelImage();
+    }
+
+    private void UpdateLevelStatus()
+    {
+        if (levelNumber == 1)
+        {
+            unlocked = true;
+        }
+        else
+        {
+            int previousLevel = levelNumber - 1;
+            unlocked = PlayerPrefs.GetInt("Level_" + previousLevel) == 1;
+        }
+    }
+
+    private void UpdateLevelImage()
+    {
+        unlockImage.gameObject.SetActive(!unlocked);
+    }
+
+    public void PressSelection(string levelName)
+    {
+        if (unlocked)
+        {
+            SceneManager.LoadScene(levelName);
+        }
     }
 }
