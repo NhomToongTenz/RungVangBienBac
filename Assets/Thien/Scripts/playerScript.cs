@@ -67,7 +67,7 @@ public class playerScript : MonoBehaviour
 
         if (poleBack == true)
         {
-            playerAnim.Play("playerSwingBack");
+            playerAnim.Play("PlayerSwingBack");
             savedTargetTime = targetTime;
             targetTime += Time.deltaTime;
         }
@@ -83,12 +83,12 @@ public class playerScript : MonoBehaviour
                 savedTargetTime = 0.0f;
                 extraBobberDistance = 0.0f;
             }
-            playerAnim.Play("playerFishing");
+            playerAnim.Play("PlayerFishing");
         }
 
         if (Input.GetKeyDown(KeyCode.P) && timeTillCatch <= 3)
         {
-            playerAnim.Play("playerStill");
+            playerAnim.Play("PlayerStill");
             poleBack = false;
             throwBobber = false;
             isFishing = false;
@@ -99,8 +99,8 @@ public class playerScript : MonoBehaviour
 
     public void fishGameWon()
     {
-        playerAnim.Play("playerWonFish");
-        fishGame.SetActive(false);
+        playerAnim.Play("PlayerWonFish");
+        
         poleBack = false;
         throwBobber = false;
         isFishing = false;
@@ -108,7 +108,7 @@ public class playerScript : MonoBehaviour
     }
     public void fishGameLossed()
     {
-        playerAnim.Play("playerStill");
+        playerAnim.Play("PlayerStill");
         fishGame.SetActive(false);
         poleBack = false;
         throwBobber = false;
