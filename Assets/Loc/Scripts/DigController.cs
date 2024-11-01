@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class DigController : MonoBehaviour
 {
+    public UIManager UIManager; // Tham chiếu tới UIManager
     public Tilemap groundCoverTilemap;
     public Tilemap trapTilemap;
     public Tilemap groundTilemap;
     public GameObject endPoint;
-    public string levelSelectionSceneName;
     public Vector3 startDigPosition;
-    public int currentLevel; // Số cấp độ hiện tại (chỉ định trong Inspector)
+    public int currentLevel;
 
     private HashSet<Vector3Int> dugPositions = new HashSet<Vector3Int>();
     private bool canDig = false;
@@ -46,17 +45,19 @@ public class DigController : MonoBehaviour
                     groundCoverTilemap.SetTile(cellPosition, null);
                     dugPositions.Add(cellPosition);
 
+                    // Kiểm tra nếu người chơi chạm bẫy
                     if (trapTilemap.HasTile(cellPosition))
                     {
                         Debug.Log("Trúng bẫy! Bắt đầu lại.");
-                        ResetPlayerPosition();
+                        UIManager.ShowTrapMenu(); // Hiển thị menu chạm bẫy
                     }
+                    // Kiểm tra nếu đạt tới đích
                     else if (endPoint != null && cellPosition == groundCoverTilemap.WorldToCell(endPoint.transform.position))
                     {
                         Debug.Log("Chúc mừng! Đã qua màn.");
                         CompleteCurrentLevel();
                         RevealEntireMap();
-                        LoadLevelSelectionScene();
+                        UIManager.ShowSuccessMenu(); // Hiển thị menu qua màn
                     }
                 }
             }
@@ -122,17 +123,5 @@ public class DigController : MonoBehaviour
                 groundCoverTilemap.SetTile(pos, null);
             }
         }
-    }
-
-    private void LoadLevelSelectionScene()
-    {
-        SceneManager.LoadScene("Level_UI");
-    }
-
-    private void ResetPlayerPosition()
-    {
-        dugPositions.Clear();
-        dugPositions.Add(Vector3Int.FloorToInt(startDigPosition));
-        canDig = false;
     }
 }
