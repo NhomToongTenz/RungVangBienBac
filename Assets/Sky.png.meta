@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 2eab140c70e85d64a97fa2737713203d
+guid: 5ec8ee70b31c74f4a9c50c8c9cb61c9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 766172107268008241
-    second: Hive_0
-  - first:
-      213: 5772342475331282909
-    second: Hive_1
-  - first:
-      213: -2401194480189363290
-    second: Hive_2
-  - first:
-      213: -8207991791113034695
-    second: Hive_3
-  - first:
-      213: 1954642888887649446
-    second: Hive_4
-  - first:
-      213: -1075526926592239440
-    second: Hive_5
+      213: 2410671940745902572
+    second: Sky_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hive_0
+      name: Sky_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 287
-        width: 129
-        height: 113
+        y: 0
+        width: 320
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,118 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 139a582e87df1aa00800000000000000
-      internalID: 766172107268008241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hive_1
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 368
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd7250ce5ea7b1050800000000000000
-      internalID: 5772342475331282909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hive_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 48
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ab2fa3a75e3daed0800000000000000
-      internalID: -2401194480189363290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hive_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 143
-        width: 113
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 934a26b24fa571e80800000000000000
-      internalID: -8207991791113034695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hive_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 271
-        width: 16
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a444eee959402b10800000000000000
-      internalID: 1954642888887649446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hive_5
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 230
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b81a1a65f5f211f0800000000000000
-      internalID: -1075526926592239440
+      spriteID: ce9392a9b5d647120800000000000000
+      internalID: 2410671940745902572
       vertices: []
       indices: 
       edges: []
@@ -272,13 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Hive_0: 766172107268008241
-      Hive_1: 5772342475331282909
-      Hive_2: -2401194480189363290
-      Hive_3: -8207991791113034695
-      Hive_4: 1954642888887649446
-      Hive_5: -1075526926592239440
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
