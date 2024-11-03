@@ -42,14 +42,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseScale: 15
+    - _NoiseScale: 25
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RefractionStrength: 1
     - _Transparency: 0.8
-    - _WaterSpeed: 0.05
+    - _WaterSpeed: 3
     m_Colors:
-    - _Color: {r: 0.6245283, g: 0.92258304, b: 1, a: 1}
+    - _Color: {r: 0.07191872, g: 0.4392157, b: 0.97735846, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &6581607819866062798
