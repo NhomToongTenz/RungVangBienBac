@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
     public float speed = 1f; // Tốc độ ban đầu của BoatController
+    private bool isStopped = false; // Trạng thái dừng của thuyền
 
     // Hàm này để tăng tốc độ
     public void IncreaseSpeed(float amount)
@@ -12,9 +13,24 @@ public class BoatController : MonoBehaviour
         speed += amount;
     }
 
-    // Ví dụ di chuyển sang phải dựa trên tốc độ
+    // Hàm này để dừng thuyền
+    public void StopBoat()
+    {
+        isStopped = true;
+    }
+
+    // Hàm này để tiếp tục di chuyển thuyền
+    public void ResumeBoat()
+    {
+        isStopped = false;
+    }
+
     void Update()
     {
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        // Di chuyển thuyền nếu không dừng
+        if (!isStopped)
+        {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
     }
 }
