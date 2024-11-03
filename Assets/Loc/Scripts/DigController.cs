@@ -29,25 +29,36 @@ public class DigController : MonoBehaviour
 
         if (Input.GetMouseButton(0) && canDig)
         {
-            // Lấy vị trí chuột trong thế giới
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int cellPosition = groundCoverTilemap.WorldToCell(mouseWorldPos);
 
-            // Chỉ cho phép tiết lộ khi vị trí hiện tại đã được đào hoặc liền kề với vị trí đã đào
             if (dugPositions.Contains(cellPosition) || IsAdjacentToDug(cellPosition))
             {
-                // Kiểm tra nếu có tile đất (ground)
                 if (groundTilemap.HasTile(cellPosition))
                 {
-                    RevealSmallArea(cellPosition); // Gọi hàm RevealSmallArea
+                    RevealConnectedGroundArea(cellPosition);
                     return;
                 }
 
-                // Kiểm tra nếu có tile lớp che (groundCover)
                 if (groundCoverTilemap.HasTile(cellPosition))
                 {
-                    // Tiết lộ vùng nhỏ quanh vị trí hiện tại
-                    RevealSmallArea(cellPosition);
+                    groundCoverTilemap.SetTile(cellPosition, null);
+                    dugPositions.Add(cellPosition);
+
+                    // Kiểm tra nếu người chơi chạm bẫy
+                    if (trapTilemap.HasTile(cellPosition))
+                    {
+                        Debug.Log("Trúng bẫy! Bắt đầu lại.");
+                        UIManager.ShowTrapMenu(); // Hiển thị menu chạm bẫy
+                    }
+                    // Kiểm tra nếu đạt tới đích
+                    else if (endPoint != null && cellPosition == groundCoverTilemap.WorldToCell(endPoint.transform.position))
+                    {
+                        Debug.Log("Chúc mừng! Đã qua màn.");
+                        CompleteCurrentLevel();
+                        RevealEntireMap();
+                        UIManager.ShowSuccessMenu(); // Hiển thị menu qua màn
+                    }
                 }
             }
         }
@@ -75,43 +86,32 @@ public class DigController : MonoBehaviour
         return false;
     }
 
-    private void RevealSmallArea(Vector3Int center)
+    private void RevealConnectedGroundArea(Vector3Int start)
     {
-        // Tạo một danh sách các vị trí xung quanh điểm vuốt (vùng nhỏ)
-        Vector3Int[] offsets = new Vector3Int[]
-        {
-        Vector3Int.zero, // Vị trí người chơi vuốt
-        Vector3Int.up, Vector3Int.down, Vector3Int.left, Vector3Int.right
-        };
+        Queue<Vector3Int> toReveal = new Queue<Vector3Int>();
+        HashSet<Vector3Int> visited = new HashSet<Vector3Int>();
+        toReveal.Enqueue(start);
 
-        foreach (Vector3Int offset in offsets)
+        while (toReveal.Count > 0)
         {
-            Vector3Int revealPosition = center + offset;
-
-            // Chỉ tiết lộ nếu ô đó có tile lớp che (groundCover)
-            if (groundCoverTilemap.HasTile(revealPosition))
+            Vector3Int pos = toReveal.Dequeue();
+            if (!visited.Contains(pos) && groundTilemap.HasTile(pos))
             {
-                groundCoverTilemap.SetTile(revealPosition, null);
-                dugPositions.Add(revealPosition);
+                groundCoverTilemap.SetTile(pos, null);
+                visited.Add(pos);
+                dugPositions.Add(pos);
+
+                foreach (Vector3Int offset in new Vector3Int[] { Vector3Int.up, Vector3Int.down, Vector3Int.left, Vector3Int.right })
+                {
+                    Vector3Int neighborPos = pos + offset;
+                    if (!visited.Contains(neighborPos) && groundTilemap.HasTile(neighborPos))
+                    {
+                        toReveal.Enqueue(neighborPos);
+                    }
+                }
             }
         }
-
-        // Kiểm tra bẫy và điểm đích chỉ tại vị trí chính xác người chơi vuốt (Vector3Int.zero)
-        if (trapTilemap.HasTile(center))
-        {
-            Debug.Log("Trúng bẫy! Bắt đầu lại.");
-            UIManager.ShowTrapMenu(); // Hiển thị menu chạm bẫy
-        }
-        else if (endPoint != null && center == groundCoverTilemap.WorldToCell(endPoint.transform.position))
-        {
-            Debug.Log("Chúc mừng! Đã qua màn.");
-            CompleteCurrentLevel();
-            RevealEntireMap();
-            UIManager.ShowSuccessMenu(); // Hiển thị menu qua màn
-        }
     }
-
-
 
     private void RevealEntireMap()
     {
