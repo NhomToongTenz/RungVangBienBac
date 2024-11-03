@@ -210,10 +210,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Jump-End-Sheet_0: -2268674869191614166
-      Jump-End-Sheet_1: 7223305902920631688
-      Jump-End-Sheet_2: 4062616787491900451
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
