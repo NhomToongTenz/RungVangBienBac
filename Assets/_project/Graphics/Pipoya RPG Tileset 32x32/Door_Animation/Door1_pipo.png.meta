@@ -622,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Door1_pipo_0: 7837465544362961944
+      Door1_pipo_1: 6858749808672062575
+      Door1_pipo_10: -9141248729353806968
+      Door1_pipo_11: -4962117951231432607
+      Door1_pipo_12: 893768026290445078
+      Door1_pipo_13: 6774606129959066073
+      Door1_pipo_14: -8439504772397593794
+      Door1_pipo_15: 5019020415351438550
+      Door1_pipo_16: -1728832718776618416
+      Door1_pipo_17: -293355437349005106
+      Door1_pipo_18: 6639364952124321305
+      Door1_pipo_19: 156512243167372090
+      Door1_pipo_2: -3053864258934177642
+      Door1_pipo_3: -129219495170882171
+      Door1_pipo_4: -4671800912250220316
+      Door1_pipo_5: 4981607790327837144
+      Door1_pipo_6: 3471660687634138731
+      Door1_pipo_7: 6485183680583988657
+      Door1_pipo_8: -3386562980385809763
+      Door1_pipo_9: -7498043059193118782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

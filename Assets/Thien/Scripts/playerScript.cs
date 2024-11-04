@@ -204,13 +204,13 @@ public class playerScript : MonoBehaviour
         Time.timeScale = 1; // Resume the game
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu"); // Load main menu scene
     }
-    private void OnTriggerEnter2D(Collider other)
-    {
-        // Check if the player collides with a wave
-        if (other.CompareTag("Wave"))
-        {
-            lives--;
-            UpdateLivesText(); // Update lives UI
-        }
-    }
+    //private void OnTriggerEnter2D(Collider other)
+    //{
+    //    // Check if the player collides with a wave
+    //    if (other.CompareTag("Wave"))
+    //    {
+    //        lives--;
+    //        UpdateLivesText(); // Update lives UI
+    //    }
+    //}
 }
