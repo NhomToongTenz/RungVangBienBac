@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Activator
   - Boat
+  - fish
+  - Trash
+  - Wave
   layers:
   - Default
   - TransparentFX
@@ -51,6 +54,12 @@ TagManager:
     locked: 0
   - name: nen
     uniqueID: 3819774913
+    locked: 0
+  - name: Decor
+    uniqueID: 200139027
+    locked: 0
+  - name: Rain
+    uniqueID: 439851537
     locked: 0
   m_RenderingLayers:
   - Default
