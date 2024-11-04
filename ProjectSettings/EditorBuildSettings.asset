@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/_project/Scene/Loby/MainMenu.unity
     guid: 8866f87118c2a4bfba1276078bab2121
   - enabled: 1
-    path: Assets/Loc/Scenes/Level_UI.unity
+    path: Assets/_project/Scene/Scene1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/_project/Scene/CutScene.unity
+    guid: a811102a8a9972543801d9f910e409ff
+  - enabled: 1
+    path: Assets/Loc/Scenes/Level_UI.unity
+    guid: 6e9fa97de6ef0ee4aa7ce58ff3f7b98c
   - enabled: 1
     path: Assets/Loc/Scenes/Level1.unity
     guid: 91660940719b7de429a6c45a6fba09ea
@@ -23,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Loc/Scenes/CC.unity
     guid: 480920c326578c34f8e58f2d9f94e93d
-  - enabled: 0
+  - enabled: 1
     path: Assets/_project/Scene/Scenes/RaceBoat.unity
     guid: a7efac3f0da73e7439004acd29203987
   m_configObjects:
