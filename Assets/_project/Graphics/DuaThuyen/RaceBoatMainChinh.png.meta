@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RaceBoatMainChinh_0: 85962244465121849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
