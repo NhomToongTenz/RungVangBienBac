@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      german-shephard-sniff-004_0: 6210819507292095998
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

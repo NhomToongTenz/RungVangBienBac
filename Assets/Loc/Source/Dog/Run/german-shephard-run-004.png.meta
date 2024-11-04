@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      german-shephard-run-004_0: 3218664673999950677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

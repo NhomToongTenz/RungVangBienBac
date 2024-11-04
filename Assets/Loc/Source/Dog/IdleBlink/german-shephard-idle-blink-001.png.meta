@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      german-shephard-idle-blink-001_0: 256991070532626310
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
