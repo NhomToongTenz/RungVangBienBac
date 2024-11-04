@@ -8,14 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 input;
 
-    private Animator anim;
-    private Vector2 lastMoveDirection;
-    private bool facingRight = true;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        anim = GetComponent<Animator>();
+   ;
         rb = GetComponent<Rigidbody2D>();
     }
 
