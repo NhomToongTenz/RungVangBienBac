@@ -162,7 +162,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "A 2D pixel art scene inspired by a Vietnamese suburban street, resembling Cu\u0309 Chi town. The scene inc..._0": -3932101492477012886
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
