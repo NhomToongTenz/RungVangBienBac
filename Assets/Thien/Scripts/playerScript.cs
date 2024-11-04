@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class playerScript : MonoBehaviour
 {
+    public UIFishing UIFishing;
+
     // Start is called before the first frame update
     public Animator playerAnim;
     public bool isFishing;
@@ -20,6 +23,8 @@ public class playerScript : MonoBehaviour
 
     public float timeTillCatch = 0.0f;
     public bool winnerAnim;
+
+    public int countFish;
 
     void Start()
     {
@@ -99,12 +104,18 @@ public class playerScript : MonoBehaviour
 
     public void fishGameWon()
     {
+        countFish++;
         playerAnim.Play("PlayerWonFish");
         
         poleBack = false;
         throwBobber = false;
         isFishing = false;
         timeTillCatch = 0;
+
+        if (countFish >= 2)
+        {
+            UIFishing.ShowSuccessMenu();
+        }
     }
     public void fishGameLossed()
     {
