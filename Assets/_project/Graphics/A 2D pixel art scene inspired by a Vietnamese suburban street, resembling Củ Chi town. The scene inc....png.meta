@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 2015aed64553be94ea63b4c0886bab7d
+guid: 73f33616a3d85486ba5137651881397e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2428125954034923654
-    second: german-shephard-idle-blink-004_0
+      213: -3932101492477012886
+    second: "A 2D pixel art scene inspired by a Vietnamese suburban street, resembling
+      Cu\u0309 Chi town. The scene inc..._0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +127,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: german-shephard-idle-blink-004_0
+      name: "A 2D pixel art scene inspired by a Vietnamese suburban street, resembling
+        Cu\u0309 Chi town. The scene inc..._0"
       rect:
         serializedVersion: 2
-        x: 35
-        y: 44
-        width: 125
-        height: 80
+        x: 0
+        y: 0
+        width: 1024
+        height: 576
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7787df3f409d4ed0800000000000000
-      internalID: -2428125954034923654
+      spriteID: a64df18968e5e69c0800000000000000
+      internalID: -3932101492477012886
       vertices: []
       indices: 
       edges: []
@@ -160,8 +162,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      german-shephard-idle-blink-004_0: -2428125954034923654
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
