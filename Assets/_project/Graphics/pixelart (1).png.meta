@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9070df64f2ce0094ea2ca4c7e97ca711
+guid: b6b01eee8af1642ef955aa71dd40418e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5445179560327163585
-    second: nuoc_0
+      213: -3600336573920669293
+    second: pixelart (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nuoc_0
+      name: pixelart (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
-        height: 92
+        width: 1024
+        height: 576
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f315b782a06de64b0800000000000000
-      internalID: -5445179560327163585
+      spriteID: 3919c9f16f8090ec0800000000000000
+      internalID: -3600336573920669293
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nuoc_0: -5445179560327163585
+      pixelart (1)_0: -3600336573920669293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
